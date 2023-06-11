@@ -3,31 +3,45 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Images } from "../../constants";
 
+import { AppWrap } from "../../wrapper";
+
+import { urlFor, client } from "../../client";
 import "./About.scss";
 
-const abouts = [
-  {
-    title: "Web Development",
-    description: "I am a good web developer",
-    imgUrl: Images.about01,
-  },
-  {
-    title: "Web Design",
-    description: "I am a good web developer",
-    imgUrl: Images.about02,
-  },
-  {
-    title: "Web Animation",
-    description: "I am a good web developer",
-    imgUrl: Images.about03,
-  },
-  {
-    title: "UI/UX",
-    description: "I am a good web developer",
-    imgUrl: Images.about04,
-  },
-];
+// static dataset
+// const abouts = [
+//   {
+//     title: "Web Development",
+//     description: "I am a good web developer",
+//     imgUrl: Images.about01,
+//   },
+//   {
+//     title: "Web Design",
+//     description: "I am a good web developer",
+//     imgUrl: Images.about02,
+//   },
+//   {
+//     title: "Web Animation",
+//     description: "I am a good web developer",
+//     imgUrl: Images.about03,
+//   },
+//   {
+//     title: "UI/UX",
+//     description: "I am a good web developer",
+//     imgUrl: Images.about04,
+//   },
+// ];
+
 const About = () => {
+  // sanity dataset
+  const [abouts, setAbouts] = useState([]);
+  useEffect(() => {
+    const query = '*[_type == "abouts"]';
+
+    client.fetch(query).then((data) => setAbouts(data));
+  }, []);
+  // sanity dataset end
+
   return (
     <>
       <h2 className="head-text">
@@ -44,9 +58,17 @@ const About = () => {
             className="app__profile-item"
             key={about.title + index}
           >
-            <img src={about.imgUrl} alt={about.title}></img>
-            <h2 className="bold-text">{about.title}</h2>
-            <p className="p-text">{about.description}</p>
+            {/* For static */}
+            {/* <img src={about.imgUrl} alt={about.title}></img> */}
+
+            {/* For sanity */}
+            <img src={urlFor(about.imgUrl)} alt={about.title}></img>
+            <h2 className="bold-text" style={{ marginTop: 10 }}>
+              {about.title}
+            </h2>
+            <p className="p-text" style={{ marginTop: 10 }}>
+              {about.description}
+            </p>
           </motion.div>
         ))}
       </div>
@@ -54,4 +76,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AppWrap(About, "about");
