@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import { motion } from "framer-motion";
-import { Images } from "../../constants";
+// import { Images } from "../../constants";
 
 import { AppWrap } from "../../wrapper";
 
@@ -35,10 +35,13 @@ import "./About.scss";
 const About = () => {
   // sanity dataset
   const [abouts, setAbouts] = useState([]);
+
   useEffect(() => {
     const query = '*[_type == "abouts"]';
 
-    client.fetch(query).then((data) => setAbouts(data));
+    client.fetch(query).then((data) => {
+      setAbouts(data);
+    });
   }, []);
   // sanity dataset end
 
