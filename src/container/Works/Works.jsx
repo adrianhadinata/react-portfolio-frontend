@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AppWrap } from "../../wrapper";
+import { AppWrap, MotionWrap } from "../../wrapper";
 import { motion } from "framer-motion";
 import { client, urlFor } from "../../client";
 
@@ -31,6 +31,7 @@ const Works = () => {
 
   useEffect(() => {
     const query = '*[_type == "works"]';
+    console.log("fetch work");
 
     client.fetch(query).then((data) => {
       setFilterWorks(data);
@@ -123,4 +124,8 @@ const Works = () => {
   );
 };
 
-export default AppWrap(Works, "works", "app__works");
+export default AppWrap(
+  MotionWrap(Works, "app__works"),
+  "works",
+  "app__primarybg"
+);
