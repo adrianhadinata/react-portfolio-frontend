@@ -5,6 +5,7 @@
 }
 
 .app__sertificates-item {
+  border: 1px solid red;
   width: 60%;
   min-height: 320px; // if we move right and left, height will be the same
   background-color: var(--white-color);
@@ -16,9 +17,10 @@
   transition: all 0.3s ease-in-out;
 
   img {
+    border: 1px solid red;
     width: 100px;
     height: 100px;
-    border-radius: 50%;
+    // border-radius: 50%;
     object-fit: cover;
   }
 
@@ -41,6 +43,7 @@
 }
 
 .app__sertificates-content {
+  border: 1px solid red;
   flex: 1;
   height: 100%;
   text-align: left;

@@ -14,12 +14,14 @@ const Navbar = () => {
         <img src={Images.logo} alt="Logo" />
       </div>
       <ul className="app__navbar-links">
-        {["home", "about", "contact", "works", "skills"].map((item) => (
-          <li className="app__flex p-text" key={`link-${item}`}>
-            <div></div>
-            <a href={`#${item}`}>{item}</a>
-          </li>
-        ))}
+        {["home", "about", "works", "skills", "testimonial", "contact"].map(
+          (item) => (
+            <li className="app__flex p-text" key={`link-${item}`}>
+              <div></div>
+              <a href={`#${item}`}>{item}</a>
+            </li>
+          )
+        )}
       </ul>
 
       <div className="app__navbar-menu">
@@ -32,7 +34,14 @@ const Navbar = () => {
           >
             <HiX onClick={() => setTogle(false)}></HiX>
             <ul>
-              {["home", "about", "contact", "works", "skills"].map((item) => (
+              {[
+                "home",
+                "about",
+                "works",
+                "skills",
+                "testimonial",
+                "contact",
+              ].map((item) => (
                 <li key={item}>
                   <a href={`#${item}`} onClick={() => setTogle(false)}>
                     {item}

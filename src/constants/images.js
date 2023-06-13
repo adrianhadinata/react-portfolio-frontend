@@ -15,6 +15,7 @@ import python from "../assets/python.png";
 import react from "../assets/react.png";
 import redux from "../assets/redux.png";
 import sass from "../assets/sass.png";
+import codeigniter from "../assets/codeigniter.png";
 import typescript from "../assets/typescript.png";
 import vue from "../assets/vue.png";
 
@@ -25,7 +26,8 @@ import about04 from "../assets/about04.png";
 
 import profile from "../assets/profile.png";
 import circle from "../assets/circle.svg";
-import logo from "../assets/logo.png";
+import logo from "../assets/my_logo.png";
+import adrian2048 from "../assets/adrian2048.png";
 
 import adidas from "../assets/adidas.png";
 import amazon from "../assets/amazon.png";
@@ -69,4 +71,6 @@ export default {
   nb,
   skype,
   spotify,
+  adrian2048,
+  codeigniter,
 };

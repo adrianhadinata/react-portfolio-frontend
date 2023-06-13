@@ -37,11 +37,10 @@ const Testimonials = () => {
       {sertificates.length && (
         <>
           <div className="app__sertificates-item app__flex">
+            <h4 className="bold-text">{sertificate.name}</h4>
             <img src={urlFor(sertificate.imgurl)} alt={sertificate.name}></img>
             <div className="app__sertificates-content">
-              <p className="p-text">{sertificate.feedback}</p>
               <div>
-                <h4 className="bold-text">{sertificate.name}</h4>
                 <h5 className="p-text">{sertificate.company}</h5>
               </div>
             </div>
