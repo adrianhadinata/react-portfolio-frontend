@@ -1,6 +1,7 @@
 .app {
   background-color: var(--primary-color);
   font-family: var(--font-base);
+  display: block;
 }
 
 .app__whitebg {
@@ -175,6 +176,10 @@
       width: 20px;
       height: 20px;
     }
+  }
+
+  @media screen and (max-width: 750px) {
+    display: none;
   }
 }
 

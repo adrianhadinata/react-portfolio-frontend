@@ -88,6 +88,7 @@
 }
 
 .app__navbar-menu {
+  border: 1px solid red;
   background: var(--secondary-color);
   border-radius: 50%;
   width: 35px;
@@ -97,6 +98,12 @@
   justify-content: center;
   align-items: center;
   // text-align: center;
+
+  // mobile
+  @media screen and (max-width: 420px) {
+    margin-right: 20%;
+    // overflow: hidden;
+  }
 
   svg {
     width: 70%;

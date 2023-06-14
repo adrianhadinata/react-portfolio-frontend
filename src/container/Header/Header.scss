@@ -121,9 +121,21 @@
     background: var(--white-color);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 
+    // mobile
+    @media screen and (max-width: 420px) {
+      width: 90px;
+      height: 90px;
+    }
+
     img {
       width: 60%;
       height: 60%;
+
+      // mobile
+      @media screen and (max-width: 420px) {
+        width: 50%;
+        height: 50%;
+      }
     }
   }
 
@@ -136,6 +148,11 @@
     margin: 1.75rem;
     width: 150px;
     height: 150px;
+
+    // mobile
+    @media screen and (max-width: 420px) {
+      margin: 0;
+    }
   }
 
   div:nth-child(3) {
@@ -174,6 +191,12 @@
     .circle-cmp {
       z-index: 1;
     }
+  }
+
+  // mobile
+  @media screen and (max-width: 420px) {
+    border-radius: 20px 20px 0 0;
+    background-color: rgba(169, 192, 212, 0.5);
   }
 }
 
