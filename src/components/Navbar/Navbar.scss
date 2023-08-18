@@ -88,7 +88,6 @@
 }
 
 .app__navbar-menu {
-  border: 1px solid red;
   background: var(--secondary-color);
   border-radius: 50%;
   width: 35px;
@@ -101,7 +100,7 @@
 
   // mobile
   @media screen and (max-width: 420px) {
-    margin-right: 20%;
+    // margin-right: 5px;
     // overflow: hidden;
   }
 

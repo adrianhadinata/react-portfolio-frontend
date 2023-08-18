@@ -3,12 +3,13 @@ import { motion } from "framer-motion";
 import { HiChevronDoubleLeft, HiChevronDoubleRight } from "react-icons/hi";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
-import { urlFor, client } from "../../client";
+// import { urlFor, client } from "../../client";
+import { Images } from "../../constants";
 import "./Testimonials.scss";
 
 const Testimonials = () => {
-  const [brands, setBrands] = useState([]);
-  const [sertificates, setSertificates] = useState([]);
+  // const [brands, setBrands] = useState([]);
+  // const [sertificates, setSertificates] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleClick = (index) => {
@@ -16,19 +17,51 @@ const Testimonials = () => {
     setCurrentIndex(index);
   };
 
-  useEffect(() => {
-    const sertificatesQuery = '*[_type == "testimonials"]';
-    const brandsQuery = '*[_type == "brands"]';
-    console.log("fetch testimonial");
+  const sertificates = [
+    {
+      imgurl: Images.sqladvance,
+      name: "SQL (Advance)",
+      company: "HackerRank",
+    },
+    {
+      imgurl: Images.jsasync,
+      name: "Javascript Async",
+      company: "Codepolitan",
+    },
+    {
+      imgurl: Images.dataengineer,
+      name: "Data Engineer",
+      company: "Digitalent Profesional Academy - Kominfo",
+    },
+  ];
+  const brands = [
+    {
+      imgUrl: Images.discount,
+      name: "Discount Notebook",
+    },
+    {
+      imgUrl: Images.globalindo,
+      name: "PT. Globalindo Intimates",
+    },
+    {
+      imgUrl: Images.tebeaa,
+      name: "TB. AA",
+    },
+  ];
 
-    client.fetch(sertificatesQuery).then((data) => {
-      setSertificates(data);
-    });
+  // useEffect(() => {
+  // const sertificatesQuery = '*[_type == "testimonials"]';
+  // const brandsQuery = '*[_type == "brands"]';
+  // console.log("fetch testimonial");
 
-    client.fetch(brandsQuery).then((data) => {
-      setBrands(data);
-    });
-  }, []);
+  // client.fetch(sertificatesQuery).then((data) => {
+  //   setSertificates(data);
+  // });
+
+  // client.fetch(brandsQuery).then((data) => {
+  //   setBrands(data);
+  // });
+  // }, []);
 
   const sertificate = sertificates[currentIndex];
 
@@ -38,7 +71,7 @@ const Testimonials = () => {
         <>
           <div className="app__sertificates-item app__flex">
             <h4 className="bold-text">{sertificate.name}</h4>
-            <img src={urlFor(sertificate.imgurl)} alt={sertificate.name}></img>
+            <img src={sertificate.imgurl} alt={sertificate.name}></img>
             <div className="app__sertificates-content">
               <div>
                 <h5 className="p-text">{sertificate.company}</h5>
@@ -78,7 +111,7 @@ const Testimonials = () => {
       <div className="app__sertificates-brands app__flex">
         {brands.map((brand) => (
           <motion.div key={brand._id}>
-            <img src={urlFor(brand.imgUrl)} alt={brand.name} />
+            <img src={brand.imgUrl} alt={brand.name} />
           </motion.div>
         ))}
       </div>

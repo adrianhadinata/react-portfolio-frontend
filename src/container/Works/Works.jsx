@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { motion } from "framer-motion";
-import { client, urlFor } from "../../client";
+import { Images } from "../../constants";
+// import { client, urlFor } from "../../client";
 
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import "./Works.scss";
 
 const Works = () => {
   const handleWorkFilter = (item) => {
-    console.log(item);
-    console.log(works);
     setActiveFilter(item);
     setAnimateCard([{ y: 100, opacity: 0 }]);
 
@@ -26,17 +25,51 @@ const Works = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
-  const [works, setWorks] = useState([]);
+  // const [works, setWorks] = useState([]);
   const [filterWorks, setFilterWorks] = useState([]);
 
+  const works = [
+    {
+      name: "E-BUDGETING",
+      projectLink: "#",
+      tags: ["CodeIgniter", "All"],
+      imgUrl: Images.budgeting,
+      title: "E-BUDGETING",
+      description:
+        "I built this project fullstack for helping Accounting & Finance Department in PT. Globalindo Intimates. Builded using CodeIgniter 3, MySQL, Bootstrap 4 and various javascript libraries such as JQuery, DataTables, ChartJS, JQueryMask, etc.",
+    },
+    {
+      name: "Sewing Data Analytics",
+      projectLink: "#",
+      tags: ["CodeIgniter", "All"],
+      imgUrl: Images.layout,
+      title: "Sewing Data Analytics",
+      description:
+        "I built this project fullstack for helping Industrial Development Department in PT. Globalindo Intimates. Builded using CodeIgniter 3, MySQL, Bootstrap 3 and various javascript libraries such as JQuery, DataTables, ChartJS, KonvaJS, etc.",
+    },
+    {
+      name: "Payroll Management System",
+      projectLink: "#",
+      tags: ["CodeIgniter", "All"],
+      imgUrl: Images.payroll,
+      title: "Payroll Management System",
+      description:
+        "I built this project fullstack for Human Resource Department in PT. Rehobat Sringin. Builded using CodeIgniter 3, MySQL, Bootstrap 3 and various javascript libraries such as JQuery, DataTables, ChartJS, etc.",
+    },
+  ];
+
   useEffect(() => {
-    const query = '*[_type == "works"]';
+    // const query = '*[_type == "works"]';
     console.log("fetch work");
 
-    client.fetch(query).then((data) => {
-      setFilterWorks(data);
-      setWorks(data);
-    });
+    setFilterWorks(works);
+    console.log(works);
+    // setWorks(works);
+    // client.fetch(query).then((data) => {
+    //   setFilterWorks(data);
+    //   console.log(data);
+    //   setWorks(data);
+    // });
   }, []);
 
   return (
@@ -70,7 +103,7 @@ const Works = () => {
         {filterWorks.map((work, index) => (
           <div className="app__work-item app__flex" key={index}>
             <div className="app__work-img app__flex">
-              <img src={urlFor(work.imgUrl)} alt={work.name} />
+              <img src={work.imgUrl} alt={work.name} />
 
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
