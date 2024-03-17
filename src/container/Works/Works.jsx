@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { motion } from "framer-motion";
-import { Images } from "../../constants";
-// import { client, urlFor } from "../../client";
 
-import { AiFillEye, AiFillGithub } from "react-icons/ai";
+import { AiFillEye } from "react-icons/ai";
 import "./Works.scss";
+import { useNavigate } from "react-router-dom";
+
+import allProjects from "../../assets/json/works.json";
 
 const Works = () => {
   const handleWorkFilter = (item) => {
@@ -24,53 +25,14 @@ const Works = () => {
 
   const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
-
-  // const [works, setWorks] = useState([]);
   const [filterWorks, setFilterWorks] = useState([]);
 
-  const works = [
-    {
-      name: "E-BUDGETING",
-      projectLink: "#",
-      tags: ["CodeIgniter", "All"],
-      imgUrl: Images.budgeting,
-      title: "E-BUDGETING",
-      description:
-        "I built this project fullstack for helping Accounting & Finance Department in PT. Globalindo Intimates. Builded using CodeIgniter 3, MySQL, Bootstrap 4 and various javascript libraries such as JQuery, DataTables, ChartJS, JQueryMask, etc.",
-    },
-    {
-      name: "Sewing Data Analytics",
-      projectLink: "#",
-      tags: ["CodeIgniter", "All"],
-      imgUrl: Images.layout,
-      title: "Sewing Data Analytics",
-      description:
-        "I built this project fullstack for helping Industrial Development Department in PT. Globalindo Intimates. Builded using CodeIgniter 3, MySQL, Bootstrap 3 and various javascript libraries such as JQuery, DataTables, ChartJS, KonvaJS, etc.",
-    },
-    {
-      name: "Payroll Management System",
-      projectLink: "#",
-      tags: ["CodeIgniter", "All"],
-      imgUrl: Images.payroll,
-      title: "Payroll Management System",
-      description:
-        "I built this project fullstack for Human Resource Department in PT. Rehobat Sringin. Builded using CodeIgniter 3, MySQL, Bootstrap 3 and various javascript libraries such as JQuery, DataTables, ChartJS, etc.",
-    },
-  ];
-
   useEffect(() => {
-    // const query = '*[_type == "works"]';
-    console.log("fetch work");
-
     setFilterWorks(works);
-    console.log(works);
-    // setWorks(works);
-    // client.fetch(query).then((data) => {
-    //   setFilterWorks(data);
-    //   console.log(data);
-    //   setWorks(data);
-    // });
   }, []);
+
+  const works = allProjects;
+  const navigate = useNavigate();
 
   return (
     <>
@@ -80,19 +42,17 @@ const Works = () => {
       </h2>
 
       <div className="app__work-filter">
-        {["Laravel", "CodeIgniter", "Flutter", "ReactJS", "UI/UX", "All"].map(
-          (item, index) => (
-            <div
-              key={index}
-              className={`app__work-filter-item app__flex p-text ${
-                activeFilter === item ? "item-active" : ""
-              }`}
-              onClick={() => handleWorkFilter(item)}
-            >
-              {item}
-            </div>
-          )
-        )}
+        {["CodeIgniter", "Arduino", "React", "All"].map((item, index) => (
+          <div
+            key={index}
+            className={`app__work-filter-item app__flex p-text ${
+              activeFilter === item ? "item-active" : ""
+            }`}
+            onClick={() => handleWorkFilter(item)}
+          >
+            {item}
+          </div>
+        ))}
       </div>
 
       <motion.div
@@ -103,7 +63,7 @@ const Works = () => {
         {filterWorks.map((work, index) => (
           <div className="app__work-item app__flex" key={index}>
             <div className="app__work-img app__flex">
-              <img src={work.imgUrl} alt={work.name} />
+              <img src={process.env.PUBLIC_URL + work.imgUrl} alt={work.name} />
 
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
@@ -115,19 +75,12 @@ const Works = () => {
                 }}
                 className="app__work-hover app__flex"
               >
-                <a href={work.projectLink} target="_blank" rel="noreferrer">
-                  <motion.div
-                    whileHover={{ scale: [1, 0.9] }}
-                    whileInView={{ scale: [0, 1] }}
-                    transition={{
-                      duration: 0.25,
-                    }}
-                    className="app__flex"
-                  >
-                    <AiFillGithub></AiFillGithub>
-                  </motion.div>
-                </a>
-                <a href={work.projectLink} target="_blank" rel="noreferrer">
+                <button
+                  title="Click fo details"
+                  className="app_btn-details"
+                  onClick={() => navigate("/project/" + work.id)}
+                  id={work.id}
+                >
                   <motion.div
                     whileHover={{ scale: [1, 0.9] }}
                     whileInView={{ scale: [0, 1] }}
@@ -138,7 +91,7 @@ const Works = () => {
                   >
                     <AiFillEye></AiFillEye>
                   </motion.div>
-                </a>
+                </button>
               </motion.div>
             </div>
 

@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { AppWrap } from "../../wrapper";
 
 import { Images } from "../../constants";
+import { Loading } from "../../components";
 
 const scaleVariants = {
   whileInView: {
@@ -21,6 +22,7 @@ const scaleVariants = {
 const Header = () => {
   return (
     <div className="app__header app__flex">
+      <Loading></Loading>
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
@@ -35,7 +37,11 @@ const Header = () => {
             </div>
           </div>
           <div className="tag-cmp app__flex">
-            <p className="p-text">Web Developer</p>
+            <p className="">Experienced Fullstack Developer</p>
+            {/* <p className="">IoT Developer</p> */}
+          </div>
+          <div className="tag-cmp app__flex">
+            <p className="">Graduate of Informatics Engineering</p>
           </div>
         </div>
       </motion.div>
@@ -65,7 +71,7 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         className="app__header-circles"
       >
-        {[Images.codeigniter, Images.javascript, Images.sass].map(
+        {[Images.codeigniter, Images.javascript, Images.react].map(
           (circle, index) => (
             <div className="circle-cmp app_flex" key={`circle-${index}`}>
               <img src={circle} alt="circle"></img>

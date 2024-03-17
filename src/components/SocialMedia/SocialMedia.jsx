@@ -10,9 +10,9 @@ const SocialMedia = () => {
   return (
     <div className="app__social">
       <motion.div
-        data-tip
+        className="rounded-social linkedin"
         data-tooltip-id={`linkedin-${randomID}`}
-        data-tooltip-place="right"
+        // data-tooltip-place="right"
       >
         <a
           href="https://www.linkedin.com/in/adrianhhd/"
@@ -24,18 +24,14 @@ const SocialMedia = () => {
       </motion.div>
       <Tooltip
         id={`linkedin-${randomID}`}
-        data-for={randomID}
-        effect={"solid"}
-        arrowColor={"#fff"}
-        className="linkedin-tooltip"
-        classNameArrow="linkedin-arrow"
-      >
-        My Linkedin Profile
-      </Tooltip>
+        content="My LinkedIn Profile"
+        noArrow={true}
+        place="right"
+      />
       <motion.div
-        data-tip
+        className="rounded-social github"
         data-tooltip-id={`github-${randomID}`}
-        data-tooltip-place="right"
+        // data-tooltip-place="right"
       >
         <a
           href="https://github.com/adrianhadinata"
@@ -47,14 +43,10 @@ const SocialMedia = () => {
       </motion.div>
       <Tooltip
         id={`github-${randomID}`}
-        data-for={randomID}
-        effect={"solid"}
-        arrowColor={"#fff"}
-        className="github-tooltip"
-        classNameArrow="github-arrow"
-      >
-        My Github Repository
-      </Tooltip>
+        content="My Github Repository"
+        noArrow={true}
+        place="right"
+      />
     </div>
   );
 };

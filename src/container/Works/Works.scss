@@ -119,6 +119,10 @@
   opacity: 0;
   transition: all 0.3s ease;
 
+  button {
+    border-radius: 50%;
+  }
+
   div {
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.5);

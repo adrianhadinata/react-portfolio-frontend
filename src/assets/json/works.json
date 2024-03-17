@@ -1,0 +1,112 @@
+[
+  {
+    "id": "1",
+    "name": "E-BUDGETING",
+    "projectLink": "#",
+    "tags": ["CodeIgniter", "All"],
+    "frameworks": ["CodeIgniter 3", "Bootstrap 4"],
+    "libraries": ["JQuery", "DataTable", "ChartJS"],
+    "imgUrl": "/images/projects/budgeting.png",
+    "title": "E-BUDGETING",
+    "roles": ["Full Stack Website Developer"],
+    "features": [
+      "Multi User",
+      "3 Approval Method",
+      "Interactive Graph",
+      "CRUD on each Master Data",
+      "Authorization",
+      "Authentication",
+      "Various PDF and Excel Reporting",
+      "Item Receiving and Monitoring"
+    ],
+    "description": "Web App for Accounting & Finance Department in PT. Globalindo Intimates. Builded using CodeIgniter 3, MySQL, Bootstrap 4 and various javascript libraries such as JQuery, DataTables, ChartJS, JQueryMask, etc."
+  },
+  {
+    "id": "2",
+    "name": "Sewing Data Analytics",
+    "projectLink": "#",
+    "tags": ["CodeIgniter", "All"],
+    "frameworks": ["CodeIgniter 3", "Bootstrap 5"],
+    "libraries": ["JQuery", "DataTable", "KonvaJS", "ChartJS"],
+    "imgUrl": "/images/projects/layout.png",
+    "title": "Sewing Data Analytics",
+    "roles": ["Full Stack Website Developer"],
+    "features": [
+      "Multi User",
+      "Interactive Graph",
+      "CRUD on each Master Data",
+      "Authorization",
+      "Authentication",
+      "Various PDF and Excel Reporting",
+      "Production Line Layouting",
+      "Operation Breadown",
+      "Line Balancing",
+      "Cycle Time",
+      "Skill Matrix"
+    ],
+    "description": "Web App for Industrial Development Department in PT. Globalindo Intimates. Builded using CodeIgniter 3, MySQL, Bootstrap 3 and various javascript libraries such as JQuery, DataTables, ChartJS, KonvaJS, etc."
+  },
+  {
+    "id": "3",
+    "name": "Human Resource Information & Payroll Management System",
+    "projectLink": "#",
+    "tags": ["CodeIgniter", "All"],
+    "frameworks": ["CodeIgniter 3", "Bootstrap 4"],
+    "libraries": ["JQuery", "DataTable", "ZKlibrary", "ChartJS"],
+    "imgUrl": "/images/projects/payroll.png",
+    "title": "Human Resource Information & Payroll Management System",
+    "roles": ["Full Stack Website Developer"],
+    "features": [
+      "Multi User",
+      "3 Approval Method",
+      "Interactive Graph",
+      "CRUD on each Master Data",
+      "Authorization",
+      "Authentication",
+      "Various PDF and Excel Reporting",
+      "Multi Shift Salary Calculation",
+      "Employee Management",
+      "Attendance Logs Management",
+      "Integrated with Solution x100c Fingerprint Machine",
+      "Overtime Management",
+      "Work Order Management",
+      "Department, Position, Workgroup, and Title Management"
+    ],
+    "description": "Web App for Human Resource Department in PT. Rehobat Sringin. Builded using CodeIgniter 3, MySQL, Bootstrap 4 and various javascript libraries such as JQuery, DataTables, ChartJS, etc."
+  },
+  {
+    "id": "4",
+    "name": "Real-time Monitoring Temperature and Humidity Data",
+    "projectLink": "#",
+    "tags": ["CodeIgniter", "Arduino", "All"],
+    "frameworks": ["CodeIgniter 3", "Bootstrap 5"],
+    "libraries": ["JQuery", "DataTable", "ChartJS", "AnyChart"],
+    "imgUrl": "/images/projects/temphum.png",
+    "title": "Real-time Monitoring Temperature and Humidity Data",
+    "roles": ["Full Stack Website Developer", "Arduino Programmer"],
+    "features": [
+      "Interactive Graph",
+      "CRUD on each Master Data",
+      "Authorization",
+      "Authentication",
+      "Various PDF and Excel Reporting",
+      "Integrated with Internal Company's Arduino Devices"
+    ],
+    "description": "Web application that designed to receive temperature/Humidity data, process the data, and present it in the form of interactive graphs from Arduino devices located in 24 rooms at PT. Globalindo Intimates"
+  },
+  {
+    "id": "5",
+    "name": "My Portfolio",
+    "projectLink": "#",
+    "tags": ["React", "All"],
+    "imgUrl": "/images/projects/portfolio.png",
+    "title": "My Portfolio",
+    "roles": ["Full Stack Website Developer"],
+    "features": [
+      "Skill / Experience Management",
+      "Works Management",
+      "Certificates Management"
+    ],
+    "description": "My portfolio website. Builded with react"
+  }
+]

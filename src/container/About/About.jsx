@@ -1,4 +1,4 @@
-// import React, { useState, useEffect } from "react";
+import React from "react";
 
 import { motion } from "framer-motion";
 import { Images } from "../../constants";
@@ -36,6 +36,29 @@ const abouts = [
   },
 ];
 
+const lectures = [
+  {
+    title:
+      "Industrial Engineering Interns Team from Atma Jaya University Yogyakarta",
+    imgUrl: Images.internUajy,
+    description:
+      "Assisting Interns from Atma Jaya University Yogyakarta in their project called Temperature and Humidity Real-time Monitoring based on IoT. I guided them in writing clean code, programming flow/logic, troubleshooting and code efficiency. What we produced were Arduino-based devices that already installed on 24 different rooms in PT. Globalindo intimates and a Codeigniter-based web application to perform realtime monitoring along with visualization and various kinds of reporting.",
+  },
+  {
+    title:
+      "Electronic Engineering Interns Team from UDINUS University Semarang",
+    imgUrl: Images.internUdinus,
+    description:
+      "Assisting Interns from UDINUS University Semarang in their project called IoT-based Real-time Monitoring of sewing machine electric current. I guided them in writing clean code, programming flow/logic, troubleshooting and code efficiency. What we produced were Arduino-based devices that already installed on 3 sewing machine and a Codeigniter-based web application to perform realtime monitoring along with visualization and various kinds of reporting.",
+  },
+  {
+    title: "Students from SMK Negeri 1 Rota Bayat",
+    imgUrl: Images.tefaBayat,
+    description:
+      "I was assigned to teach as an invited lecturer in a government program called Teaching Factory (TEFA) at SMK Negeri 1 Rota Bayat. The material I taught was about Digital Transformation. This includes material about the history of industrial revolutions 1 to 4, which is now the era of IoT.",
+  },
+];
+
 const About = () => {
   // sanity dataset
   // const [abouts, setAbouts] = useState([]);
@@ -48,6 +71,8 @@ const About = () => {
   //   });
   // }, []);
   // sanity dataset end
+
+  // const [isEven, setIsEven] = useState(true);
 
   return (
     <>
@@ -81,6 +106,55 @@ const About = () => {
             <p className="p-text" style={{ marginTop: 10 }}>
               {about.description}
             </p> */}
+          </motion.div>
+        ))}
+      </div>
+
+      <h2 className="head-text" style={{ marginTop: 50 }}>
+        I am a person who likes to <span>learn</span> and <span>sharing</span>{" "}
+        knowledge
+      </h2>
+
+      <div className="app__profiles">
+        {lectures.map((lecture, index) => (
+          <motion.div
+            whileInView={{ opacity: 1 }}
+            // whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.5, type: "tween" }}
+            className="app__flex-lectures"
+            key={lecture.title + index}
+          >
+            <div className="app__mentoring-item">
+              <img src={lecture.imgUrl} alt={lecture.title}></img>
+            </div>
+
+            <div className="app__mentoring-item">
+              <h3 className="head-text-smaller" style={{ marginTop: 10 }}>
+                {lecture.title}
+              </h3>
+              <p style={{ marginTop: 10, textAlign: "justify" }}>
+                {lecture.description}
+              </p>
+            </div>
+            {/* {index % 2 === 0 ? (
+              <>
+                
+              </>
+            ) : (
+              <>
+                <div className="app__mentoring-item">
+                  <h3 className="head-text-smaller" style={{ marginTop: 10 }}>
+                    {lecture.title}
+                  </h3>
+                  <p style={{ marginTop: 10, textAlign: "justify" }}>
+                    {lecture.description}
+                  </p>
+                </div>
+                <div className="app__mentoring-item">
+                  <img src={lecture.imgUrl} alt={lecture.title}></img>
+                </div>
+              </>
+            )} */}
           </motion.div>
         ))}
       </div>

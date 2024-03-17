@@ -1,16 +1,11 @@
-import React, { useEffect, useState } from "react";
 import { Tooltip } from "react-tooltip";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { motion } from "framer-motion";
-// import { client, urlFor } from "../../client";
 import { Images } from "../../constants";
 
 import "./Skills.scss";
 
 const Skills = () => {
-  // const [experiences, setExperiences] = useState([]);
-  // const [skills, setSkills] = useState([]);
-
   const skills = [
     {
       id: 1,
@@ -29,6 +24,10 @@ const Skills = () => {
       icon: Images.codeigniter,
       bgColor: "#e4e4e4",
     },
+    { id: 8, name: "Go", icon: Images.golang, bgColor: "#e4e4e4" },
+    { id: 9, name: "Arduino", icon: Images.arduino, bgColor: "#e4e4e4" },
+    { id: 10, name: "MySQL", icon: Images.mysql, bgColor: "#e4e4e4" },
+    { id: 11, name: "PostgreSQL", icon: Images.postgresql, bgColor: "#e4e4e4" },
   ];
 
   const experiences = [
@@ -64,19 +63,24 @@ const Skills = () => {
     },
   ];
 
-  // useEffect(() => {
-  //   const queryExperiences = '*[_type == "experiences"]';
-  //   const querySkills = '*[_type == "skills"]';
-  //   console.log("fetch skill");
-
-  //   client.fetch(queryExperiences).then((data) => {
-  //     setExperiences(data);
-  //   });
-
-  //   client.fetch(querySkills).then((data) => {
-  //     setSkills(data);
-  //   });
-  // }, []);
+  const brands = [
+    {
+      imgUrl: Images.discount,
+      name: "Discount Notebook",
+    },
+    {
+      imgUrl: Images.globalindo,
+      name: "PT. Globalindo Intimates",
+    },
+    {
+      imgUrl: Images.tebeaa,
+      name: "TB. AA",
+    },
+    {
+      imgUrl: Images.rehobat,
+      name: "PT. Rehobat Sringin",
+    },
+  ];
 
   return (
     <>
@@ -113,7 +117,6 @@ const Skills = () => {
                         whileInView={{ opacity: [0, 1] }}
                         transition={{ duration: 0.5 }}
                         className="app__skills-exp-work"
-                        data-tip
                         data-tooltip-id={work.name}
                         key={work.name}
                       >
@@ -135,6 +138,34 @@ const Skills = () => {
             </motion.div>
           ))}
         </motion.div>
+      </div>
+      <div className="app__sertificates-brands app__flex">
+        {brands.map((brand) => (
+          <>
+            <motion.div
+              whileInView={{ opacity: [0, 1] }}
+              transition={{ duration: 0.5 }}
+              key={brand.name}
+            >
+              <img
+                src={brand.imgUrl}
+                alt={brand.name}
+                key={brand.name}
+                data-tooltip-id={brand.name}
+              />
+            </motion.div>
+            <Tooltip
+              id={brand.name}
+              place="bottom"
+              variant="dark"
+              arrowColor={"#fff"}
+              content={brand.name}
+              positionStrategy="absolute"
+              float={true}
+              noArrow={true}
+            />
+          </>
+        ))}
       </div>
     </>
   );

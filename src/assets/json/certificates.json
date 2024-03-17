@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "certificate_name": "Belajar Dasar Data Science",
+    "year": "2023",
+    "month": "October",
+    "publisher": "Dicoding Indonesia",
+    "link": "https://www.dicoding.com/certificates/98XWVD9M9PM3"
+  },
+  {
+    "id": 2,
+    "certificate_name": "Belajar Dasar Structured Query Language (SQL)",
+    "year": "2023",
+    "month": "October",
+    "publisher": "Dicoding Indonesia",
+    "link": "https://www.dicoding.com/certificates/2VX36GDQJXYQ"
+  },
+  {
+    "id": 3,
+    "certificate_name": "Belajar Membuat Aplikasi Back-End untuk Pemula",
+    "year": "2023",
+    "month": "June",
+    "publisher": "Dicoding Indonesia",
+    "link": "https://www.dicoding.com/certificates/0LZ095N9KZ65"
+  },
+  {
+    "id": 4,
+    "certificate_name": "JavaScript Async",
+    "year": "2023",
+    "month": "June",
+    "publisher": "CodePolitan",
+    "link": "https://codepolitan.com/c/JHLK8DZ"
+  },
+  {
+    "id": 5,
+    "certificate_name": "Professional Academy - Data Engineer",
+    "year": "2023",
+    "month": "May",
+    "publisher": "Digital Talent Scholarship",
+    "link": "https://digitalent.kominfo.go.id/cek-sertifikat?registrasi=1985583840-89"
+  },
+  {
+    "id": 6,
+    "certificate_name": "SQL (Basic)",
+    "year": "2023",
+    "month": "May",
+    "publisher": "HackerRank",
+    "link": "https://www.hackerrank.com/certificates/59486e7a6659"
+  },
+  {
+    "id": 7,
+    "certificate_name": "SQL (Intermediate)",
+    "year": "2023",
+    "month": "May",
+    "publisher": "HackerRank",
+    "link": "https://www.hackerrank.com/certificates/ecca79b99c93"
+  },
+  {
+    "id": 8,
+    "certificate_name": "SQL (Advanced)",
+    "year": "2023",
+    "month": "May",
+    "publisher": "HackerRank",
+    "link": "https://www.hackerrank.com/certificates/f16108b5214b"
+  },
+  {
+    "id": 9,
+    "certificate_name": "Belajar Dasar Pemrograman JavaScript",
+    "year": "2022",
+    "month": "October",
+    "publisher": "Dicoding Indonesia",
+    "link": "https://www.dicoding.com/certificates/JMZVN22O3PN9"
+  },
+  {
+    "id": 10,
+    "certificate_name": "Microsoft Azure for Beginner",
+    "year": "2022",
+    "month": "October",
+    "publisher": "Digital Talent Scholarship",
+    "link": "https://digitalent.kominfo.go.id/cek-sertifikat?registrasi=149294649100-115"
+  },
+  {
+    "id": 11,
+    "certificate_name": "Memulai Pemrograman Dengan Python",
+    "year": "2022",
+    "month": "May",
+    "publisher": "Dicoding Indonesia",
+    "link": "https://www.dicoding.com/certificates/98XWR6DL0ZM3"
+  },
+  {
+    "id": 12,
+    "certificate_name": "Kelas Pemrograman Arduino",
+    "year": "2024",
+    "month": "January",
+    "publisher": "Indobot Academy",
+    "link": "https://indobot.co.id/verifikasi-sertifikat/14AE65138-13F55331F-132E06843/"
+  },
+  {
+    "id": 13,
+    "certificate_name": "Teknik Pembuatan Aplikasi menggunakan Javascript dan Node.js bagi Javascript Engineer sebagai Programer Aplikasi",
+    "year": "2023",
+    "month": "July",
+    "publisher": "Course-Net",
+    "link": "https://coursenet.s3.ap-southeast-3.amazonaws.com/Course-Net/CompletionCertificateAdrian%20Hadinata%20Hadi%20Darsono-95374.pdf"
+  },
+  {
+    "id": 14,
+    "certificate_name": "Belajar Go-Lang untuk Pemula",
+    "year": "2023",
+    "month": "December",
+    "publisher": "CodePolitan",
+    "link": "https://codepolitan.com/c/O0SYQPN"
+  },
+  {
+    "id": 15,
+    "certificate_name": "Belajar Javascript Dasar",
+    "year": "2023",
+    "month": "June",
+    "publisher": "CodePolitan",
+    "link": "https://www.codepolitan.com/c/JFPVRXI/"
+  },
+  {
+    "id": 16,
+    "certificate_name": "Belajar JQuery Dasar",
+    "year": "2023",
+    "month": "June",
+    "publisher": "CodePolitan",
+    "link": "https://codepolitan.com/c/DVU2X8M"
+  }
+]
