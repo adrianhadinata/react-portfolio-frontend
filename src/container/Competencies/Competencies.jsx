@@ -14,6 +14,25 @@ const Competencies = () => {
     setCurrentIndex(index);
   };
 
+  const getMonthName = (month) => {
+    const months = {
+      1: "January",
+      2: "February",
+      3: "March",
+      4: "April",
+      5: "May",
+      6: "June",
+      7: "July",
+      8: "August",
+      9: "September",
+      10: "October",
+      11: "November",
+      12: "December",
+    };
+
+    return months[month];
+  };
+
   const sertificates = [
     {
       imgurl: Images.sqladvance,
@@ -39,7 +58,10 @@ const Competencies = () => {
     },
     {
       header: "Published Date",
-      accessorFn: (row) => `${row.month} ${row.year}`,
+      accessorFn: (row) => `${getMonthName(row.month)} ${row.year}`,
+      display: {
+        cell: "orewa",
+      },
     },
     {
       header: "Publisher",
@@ -48,6 +70,11 @@ const Competencies = () => {
     {
       header: "Credentials",
       cell: ({ row }) => <a href={row.original.link}>open &#8599;</a>,
+      id: "credentials",
+    },
+    {
+      header: "Link",
+      accessorKey: "link",
     },
   ];
 

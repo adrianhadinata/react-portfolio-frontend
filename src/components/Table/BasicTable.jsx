@@ -15,10 +15,13 @@ import {
   HiChevronLeft,
   HiChevronRight,
 } from "react-icons/hi";
+import { RiFileExcel2Line } from "react-icons/ri";
+import { ExportExcel } from "../../library/index";
 
 export default function BasicTable({ data, columns }) {
   const [sorting, setSorting] = useState([]);
   const [filtering, setFiltering] = useState("");
+  const [columnVisibility, setColumnVisibility] = useState({ link: false });
 
   const table = useReactTable({
     data,
@@ -28,12 +31,29 @@ export default function BasicTable({ data, columns }) {
     getSortedRowModel: getSortedRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
     state: {
+      columnVisibility: columnVisibility,
       sorting: sorting,
       globalFilter: filtering,
     },
     onSortingChange: setSorting,
     onGlobalFilterChange: setFiltering,
+    onColumnVisibilityChange: setColumnVisibility,
   });
+
+  console.log(table.getAllColumns());
+
+  const handleClickExport = () => {
+    setColumnVisibility({ link: true, credentials: false });
+
+    setTimeout(() => {
+      ExportExcel(table, "Certificates_Adrian");
+
+      setTimeout(() => {
+        setColumnVisibility({ link: false, credentials: true });
+      }, 500);
+    }, 500);
+  };
+
   return (
     <div className="">
       <div className="container_search-table">
@@ -51,6 +71,25 @@ export default function BasicTable({ data, columns }) {
             id="searchBox"
           />
         </div>
+      </div>
+
+      <div className="container_search-table">
+        {table.getAllLeafColumns().map((column) => {
+          return (
+            <div key={column.id}>
+              <label>
+                <input
+                  {...{
+                    type: "checkbox",
+                    checked: column.getIsVisible(),
+                    onChange: column.getToggleVisibilityHandler(),
+                  }}
+                />{" "}
+                {column.columnDef.header}
+              </label>
+            </div>
+          );
+        })}
       </div>
 
       <div className="w3-responsive container_table">
@@ -102,6 +141,10 @@ export default function BasicTable({ data, columns }) {
           title={"Go to previous page"}
           icon={<HiChevronLeft></HiChevronLeft>}
           isDisabled={!table.getCanPreviousPage()}
+        ></RoundedButton>
+        <RoundedButton
+          icon={<RiFileExcel2Line></RiFileExcel2Line>}
+          act={() => handleClickExport()}
         ></RoundedButton>
         <RoundedButton
           act={() => table.nextPage()}
