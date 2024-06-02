@@ -94,7 +94,10 @@ const About = () => {
             <h2 className="bold-text" style={{ marginTop: 10 }}>
               {about.title}
             </h2>
-            <p className="p-text" style={{ marginTop: 10 }}>
+            <p
+              className="p-text"
+              style={{ marginTop: 10, textAlign: "justify" }}
+            >
               {about.description}
             </p>
 
