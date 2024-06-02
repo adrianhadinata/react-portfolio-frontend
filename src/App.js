@@ -99,7 +99,7 @@ function App() {
         <RingLoader color={"#36d7b7"} loading={loading} size={150} />
       </div>
       <div className="app" style={{ display: loading ? "none" : "block" }}>
-        <Router>
+        <Router basename="/react-portfolio-frontend">
           <Routes>
             <Route path="/" element={<Home></Home>}></Route>
             <Route path="/project/:id" element={<Project></Project>}></Route>
