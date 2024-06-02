@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Home, Project } from "./pages";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import RingLoader from "react-spinners/RingLoader";
 
 import "./App.scss";
@@ -99,7 +100,7 @@ function App() {
         <RingLoader color={"#36d7b7"} loading={loading} size={150} />
       </div>
       <div className="app" style={{ display: loading ? "none" : "block" }}>
-        <Router basename="/react-portfolio-frontend">
+        <Router>
           <Routes>
             <Route path="/" element={<Home></Home>}></Route>
             <Route path="/project/:id" element={<Project></Project>}></Route>
