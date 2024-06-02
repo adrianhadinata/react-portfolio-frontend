@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.105d467d.css",
+    "main.js": "/static/js/main.d4564407.js",
+    "static/media/hackerank-sql-advance.png": "/static/media/hackerank-sql-advance.e11c08a88fec22b1f96f.png",
+    "static/media/mern.jpg": "/static/media/mern.c047c72429762dc43719.jpg",
+    "static/media/frontend.jpg": "/static/media/frontend.dc727e4b2c5aedcf085e.jpg",
+    "static/media/udinus.jpg": "/static/media/udinus.fa2e850d39a8f799373d.jpg",
+    "static/media/uajy.jpg": "/static/media/uajy.7c8809759c0fb70b329c.jpg",
+    "static/media/backend.jpg": "/static/media/backend.8189b2a3b141523df3be.jpg",
+    "static/media/postgresql.png": "/static/media/postgresql.643d40d11f764b9df1fe.png",
+    "static/media/mysql.png": "/static/media/mysql.167c88550478e6f0f85c.png",
+    "static/media/moapps.jpg": "/static/media/moapps.074f3a5e8dd535ec1a59.jpg",
+    "static/media/bayat.jpg": "/static/media/bayat.a473c536174a8953f9e5.jpg",
+    "static/media/logo-gi.png": "/static/media/logo-gi.94639e874bd06b35c2bf.png",
+    "static/media/codepolitan-javascript-async.png": "/static/media/codepolitan-javascript-async.e78fc6aef9d2ef83b563.png",
+    "static/media/adrian_jas.png": "/static/media/adrian_jas.361b87156070456c0fc9.png",
+    "static/media/Arduino.png": "/static/media/Arduino.1dd0c8adf6bae926e73d.png",
+    "static/media/bgWhite.png": "/static/media/bgWhite.055731cd0fa6d289a26f.png",
+    "static/media/bgIMG.png": "/static/media/bgIMG.3350588d468597d3489e.png",
+    "static/media/proa-data-engineer.png": "/static/media/proa-data-engineer.4766aee5b5c1697c3bce.png",
+    "static/media/javascript.png": "/static/media/javascript.a2a16f087e18d50f3d99.png",
+    "static/media/logo-aa.png": "/static/media/logo-aa.503c742d7fb2ae901d44.png",
+    "static/media/sass.png": "/static/media/sass.36e863bfbcb25c109d00.png",
+    "static/media/node.png": "/static/media/node.8683d89cf78ffae3d1f7.png",
+    "static/media/logo-dn.png": "/static/media/logo-dn.37d1559d626b99940b28.png",
+    "static/media/my_logo.png": "/static/media/my_logo.de1163982eafece51310.png",
+    "static/media/Go-lang.png": "/static/media/Go-lang.6a3cd1884425f3b03c7d.png",
+    "static/media/logo-sm-rhb.png": "/static/media/logo-sm-rhb.7f378f77a3853f2a75f0.png",
+    "static/media/mobile.png": "/static/media/mobile.145d9ce0157a56f8fcd8.png",
+    "static/media/email.png": "/static/media/email.37b9e890eea501421fbf.png",
+    "static/media/git.png": "/static/media/git.a54d3fa44e02f2f61e69.png",
+    "index.html": "/index.html",
+    "static/media/circle.svg": "/static/media/circle.ae5f84b3853b9e34aa83cf8dada715c5.svg",
+    "static/media/React-icon.svg": "/static/media/React-icon.928f956d9c8ebcffb98a8e917154a81a.svg",
+    "main.105d467d.css.map": "/static/css/main.105d467d.css.map",
+    "main.d4564407.js.map": "/static/js/main.d4564407.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.105d467d.css",
+    "static/js/main.d4564407.js"
+  ]
+}
