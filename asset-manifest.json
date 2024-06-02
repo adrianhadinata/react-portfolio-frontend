@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/adrianhadinata.github.io/react-portfolio-frontend/static/css/main.41b2feec.css",
-    "main.js": "/adrianhadinata.github.io/react-portfolio-frontend/static/js/main.07aebf70.js",
+    "main.js": "/adrianhadinata.github.io/react-portfolio-frontend/static/js/main.b66901fa.js",
     "static/media/hackerank-sql-advance.png": "/adrianhadinata.github.io/react-portfolio-frontend/static/media/hackerank-sql-advance.e11c08a88fec22b1f96f.png",
     "static/media/mern.jpg": "/adrianhadinata.github.io/react-portfolio-frontend/static/media/mern.c047c72429762dc43719.jpg",
     "static/media/frontend.jpg": "/adrianhadinata.github.io/react-portfolio-frontend/static/media/frontend.dc727e4b2c5aedcf085e.jpg",
@@ -34,10 +34,10 @@
     "static/media/circle.svg": "/adrianhadinata.github.io/react-portfolio-frontend/static/media/circle.ae5f84b3853b9e34aa83cf8dada715c5.svg",
     "static/media/React-icon.svg": "/adrianhadinata.github.io/react-portfolio-frontend/static/media/React-icon.928f956d9c8ebcffb98a8e917154a81a.svg",
     "main.41b2feec.css.map": "/adrianhadinata.github.io/react-portfolio-frontend/static/css/main.41b2feec.css.map",
-    "main.07aebf70.js.map": "/adrianhadinata.github.io/react-portfolio-frontend/static/js/main.07aebf70.js.map"
+    "main.b66901fa.js.map": "/adrianhadinata.github.io/react-portfolio-frontend/static/js/main.b66901fa.js.map"
   },
   "entrypoints": [
     "static/css/main.41b2feec.css",
-    "static/js/main.07aebf70.js"
+    "static/js/main.b66901fa.js"
   ]
 }
