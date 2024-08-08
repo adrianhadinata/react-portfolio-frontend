@@ -60,20 +60,6 @@ const lectures = [
 ];
 
 const About = () => {
-  // sanity dataset
-  // const [abouts, setAbouts] = useState([]);
-
-  // useEffect(() => {
-  //   const query = '*[_type == "abouts"]';
-
-  //   client.fetch(query).then((data) => {
-  //     setAbouts(data);
-  //   });
-  // }, []);
-  // sanity dataset end
-
-  // const [isEven, setIsEven] = useState(true);
-
   return (
     <>
       <h2 className="head-text">
@@ -100,15 +86,6 @@ const About = () => {
             >
               {about.description}
             </p>
-
-            {/* For sanity */}
-            {/* <img src={urlFor(about.imgUrl)} alt={about.title}></img>
-            <h2 className="bold-text" style={{ marginTop: 10 }}>
-              {about.title}
-            </h2>
-            <p className="p-text" style={{ marginTop: 10 }}>
-              {about.description}
-            </p> */}
           </motion.div>
         ))}
       </div>
@@ -122,7 +99,6 @@ const About = () => {
         {lectures.map((lecture, index) => (
           <motion.div
             whileInView={{ opacity: 1 }}
-            // whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5, type: "tween" }}
             className="app__flex-lectures"
             key={lecture.title + index}
@@ -139,25 +115,6 @@ const About = () => {
                 {lecture.description}
               </p>
             </div>
-            {/* {index % 2 === 0 ? (
-              <>
-                
-              </>
-            ) : (
-              <>
-                <div className="app__mentoring-item">
-                  <h3 className="head-text-smaller" style={{ marginTop: 10 }}>
-                    {lecture.title}
-                  </h3>
-                  <p style={{ marginTop: 10, textAlign: "justify" }}>
-                    {lecture.description}
-                  </p>
-                </div>
-                <div className="app__mentoring-item">
-                  <img src={lecture.imgUrl} alt={lecture.title}></img>
-                </div>
-              </>
-            )} */}
           </motion.div>
         ))}
       </div>

@@ -5,3 +5,5 @@ export { default as Skills } from "./Skills/Skills";
 export { default as Competencies } from "./Competencies/Competencies";
 export { default as Works } from "./Works/Works";
 export { default as Features } from "./Features/Features";
+export { default as ServiceContainer } from "./Services/Services";
+export { default as Testimonials } from "./Testimonials/Testimonials";

@@ -42,6 +42,17 @@ import internUdinus from "../assets/images/udinus.jpg";
 import internUajy from "../assets/images/uajy.jpg";
 import tefaBayat from "../assets/images/bayat.jpg";
 
+import serviceArduino from "../assets/images/1.png";
+import serviceWeb from "../assets/images/2.png";
+import clickWhatsApp from "../assets/images/WhatsApp-English.png";
+import buktisatu from "../assets/images/bukti1.jpeg";
+import buktidua from "../assets/images/bukti2.jpeg";
+import buktitiga from "../assets/images/bukti3.jpeg";
+import buktiempat from "../assets/images/bukti4.jpeg";
+import buktilima from "../assets/images/bukti5.jpeg";
+import buktienam from "../assets/images/bukti6.jpeg";
+import buktitujuh from "../assets/images/bukti7.jpeg";
+
 const images = {
   flutter,
   git,
@@ -75,6 +86,31 @@ const images = {
   tefaBayat,
   postgresql,
   mysql,
+  serviceArduino,
+  serviceWeb,
+  clickWhatsApp,
+  buktisatu,
+  buktidua,
+  buktitiga,
+  buktiempat,
+  buktilima,
+  buktienam,
+  buktitujuh,
+  // flutter,
+  // git,
+  // html,
+  // javascript,
+  // node,
+  // react,
+  // sass,
+  // about01,
+  // about02,
+  // about03,
+  // about04,
+  // circle,
+  // logo,
+  // mobilePhone,
+  // email,
   // temphum,
   // portfolio,
   // layout,

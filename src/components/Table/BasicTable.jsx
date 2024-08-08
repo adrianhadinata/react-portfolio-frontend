@@ -40,7 +40,7 @@ export default function BasicTable({ data, columns }) {
     onColumnVisibilityChange: setColumnVisibility,
   });
 
-  console.log(table.getAllColumns());
+  // console.log(table.getAllColumns());
 
   const handleClickExport = () => {
     setColumnVisibility({ link: true, credentials: false });

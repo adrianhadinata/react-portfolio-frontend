@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import { AiFillEye } from "react-icons/ai";
 import "./Works.scss";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import allProjects from "../../assets/json/works.json";
 
@@ -78,7 +78,7 @@ const Works = () => {
                 <button
                   title="Click fo details"
                   className="app_btn-details"
-                  onClick={() => navigate("/project/" + work.id)}
+                  // onClick={() => navigate("/project/" + work.id)}
                   id={work.id}
                 >
                   <motion.div
@@ -89,7 +89,12 @@ const Works = () => {
                     }}
                     className="app__flex"
                   >
-                    <AiFillEye></AiFillEye>
+                    <Link to={"/project/" + work.id}>
+                      <AiFillEye style={{ width: "50px" }}></AiFillEye>
+                    </Link>
+                    {/* <a href={"/project/" + work.id}>
+                      
+                    </a> */}
                   </motion.div>
                 </button>
               </motion.div>

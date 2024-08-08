@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Navbar } from "../components";
-import { Footer, Features } from "../container";
+import { NavbarProject } from "../components";
+import { Features } from "../container";
 import { useParams } from "react-router-dom";
 
 import allProjects from "../assets/json/works.json";
@@ -12,9 +12,8 @@ export default function Project() {
   let item = allProjects.find((project) => project.id === id);
   return (
     <>
-      <Navbar></Navbar>
+      <NavbarProject></NavbarProject>
       <Features features={item.features}></Features>
-      <Footer></Footer>
     </>
   );
 }

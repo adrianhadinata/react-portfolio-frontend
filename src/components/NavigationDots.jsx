@@ -1,18 +1,19 @@
 import React from "react";
 
-const NavigationDots = ({ active }) => {
+const NavigationDots = ({ active, arrMenu }) => {
+  if (!arrMenu) {
+    arrMenu = ["home", "about", "works", "skills", "competencies", "contact"];
+  }
   return (
     <div className="app__navigation">
-      {["home", "about", "works", "skills", "competencies", "contact"].map(
-        (item, index) => (
-          <a
-            href={`#${item}`}
-            key={item + index}
-            className="app__navigation-dot"
-            style={active === item ? { backgroundColor: "#313BAC" } : {}}
-          ></a>
-        )
-      )}
+      {arrMenu.map((item, index) => (
+        <a
+          href={`#${item}`}
+          key={item + index}
+          className="app__navigation-dot"
+          style={active === item ? { backgroundColor: "#313BAC" } : {}}
+        ></a>
+      ))}
     </div>
   );
 };

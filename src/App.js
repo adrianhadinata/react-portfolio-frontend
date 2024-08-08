@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Home, Project } from "./pages";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { Home, Project, Services } from "./pages";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import RingLoader from "react-spinners/RingLoader";
 
 import "./App.scss";
@@ -34,38 +33,6 @@ function App() {
         }
       }
     });
-
-    fetch("https://api.ipify.org/?format=json")
-      .then(
-        (response) => {
-          return response.json();
-        },
-        () => {
-          console.log("FETCH ERROR");
-        }
-      )
-      .then((res) => {
-        let ip = res.ip;
-        console.log("Client API:", res.ip);
-
-        fetch("https://go-portfolio-api-vydr.onrender.com/api/v1/visitors/", {
-          method: "POST",
-          mode: "no-cors",
-          headers: {
-            "access-control-allow-origin": "*",
-            "Content-Type": "application/json",
-          },
-          credentials: "same-origin",
-          body: JSON.stringify({ visitor_ip: ip }),
-        })
-          .then((res) => {
-            console.log("FETCH IP API SUCCESS", res);
-          })
-          .catch((err) => {
-            console.log("FETCH IP API ERROR", err);
-          });
-      })
-      .catch((err) => console.log("ERROR:", err));
 
     // Fungsi untuk memeriksa apakah semua gambar telah dimuat
     const checkImagesLoaded = () => {
@@ -104,6 +71,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home></Home>}></Route>
             <Route path="/project/:id" element={<Project></Project>}></Route>
+            <Route path="/services" element={<Services></Services>}></Route>
           </Routes>
         </Router>
       </div>

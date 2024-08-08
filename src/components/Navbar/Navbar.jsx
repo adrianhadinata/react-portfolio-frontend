@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 
 import "./Navbar.scss";
 
@@ -21,13 +22,23 @@ const Navbar = () => {
           (item) => (
             <li className="app__flex p-text" key={`link-${item}`}>
               {location.pathname === "/" ? (
-                <a href={`#${item}`}>{item}</a>
+                <ScrollLink
+                  to={item}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => setTogle(false)}
+                >
+                  {item}
+                </ScrollLink>
               ) : (
                 <Link to={"/#" + item}>{item}</Link>
               )}
             </li>
           )
         )}
+        <li className="app__flex p-text" key={"hhcomputindo"}>
+          <a href="/services">Services</a>
+        </li>
       </ul>
 
       <div className="app__navbar-menu">
@@ -48,19 +59,24 @@ const Navbar = () => {
                 "competencies",
                 "contact",
               ].map((item) => (
-                // <li key={item}>
-                //   <a href={`#${item}`} onClick={() => setTogle(false)}>
-                //     {item}
-                //   </a>
-                // </li>
                 <li className="app__flex p-text" key={`link-${item}`}>
                   {location.pathname === "/" ? (
-                    <a href={`#${item}`}>{item}</a>
+                    <ScrollLink
+                      to={item}
+                      smooth={true}
+                      duration={500}
+                      onClick={() => setTogle(false)}
+                    >
+                      {item}
+                    </ScrollLink>
                   ) : (
                     <Link to={"/#" + item}>{item}</Link>
                   )}
                 </li>
               ))}
+              <li className="app__flex p-text" key={"hhcomputindo"}>
+                <a href="/services">Services</a>
+              </li>
             </ul>
           </motion.div>
         )}

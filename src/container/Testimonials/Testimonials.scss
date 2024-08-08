@@ -1,0 +1,61 @@
+.app__row_testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  // margin-top: 50px;
+
+  .app__column_4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 200px;
+    background-color: var(--primary-color);
+    // border-radius: 10px;
+    gap: 10px;
+    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .app__column_icon {
+    background: #1acc8d;
+    font-size: 50px;
+    padding: 5px;
+    color: white;
+    border-radius: 50%;
+    line-height: 0px;
+  }
+}
+
+.app__profile-testimonials {
+  width: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 2rem;
+  transition: all 5s ease-in-out; // Pindahkan transition ke elemen utama
+
+  img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  &:hover {
+    scale: 1.5;
+    // cursor: zoom-in;
+  }
+}
+
+.app__text_testimonials {
+  display: flex;
+  width: 100%;
+  margin: 2rem;
+  h2 {
+    font-size: 2rem;
+  }
+}

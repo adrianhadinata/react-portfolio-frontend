@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { AppWrap } from "../../wrapper";
 
 import { Images } from "../../constants";
-import { Loading } from "../../components";
+import { Loading, ButtonWhatsApp } from "../../components";
 
 const scaleVariants = {
   whileInView: {
@@ -23,6 +23,7 @@ const Header = () => {
   return (
     <div className="app__header app__flex">
       <Loading></Loading>
+      <ButtonWhatsApp></ButtonWhatsApp>
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}

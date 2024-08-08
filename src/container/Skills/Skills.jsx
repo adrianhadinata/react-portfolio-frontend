@@ -1,18 +1,13 @@
+import React from "react";
 import { Tooltip } from "react-tooltip";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { motion } from "framer-motion";
 import { Images } from "../../constants";
-
 import "./Skills.scss";
 
 const Skills = () => {
   const skills = [
-    {
-      id: 1,
-      name: "Laravel",
-      icon: Images.laravel,
-      bgColor: "#e4e4e4",
-    },
+    { id: 1, name: "Laravel", icon: Images.laravel, bgColor: "#e4e4e4" },
     { id: 2, name: "Javascript", icon: Images.javascript, bgColor: "#e4e4e4" },
     { id: 3, name: "NodeJS", icon: Images.node, bgColor: "#e4e4e4" },
     { id: 4, name: "Flutter", icon: Images.flutter, bgColor: "#e4e4e4" },
@@ -64,22 +59,10 @@ const Skills = () => {
   ];
 
   const brands = [
-    {
-      imgUrl: Images.discount,
-      name: "Discount Notebook",
-    },
-    {
-      imgUrl: Images.globalindo,
-      name: "PT. Globalindo Intimates",
-    },
-    {
-      imgUrl: Images.tebeaa,
-      name: "TB. AA",
-    },
-    {
-      imgUrl: Images.rehobat,
-      name: "PT. Rehobat Sringin",
-    },
+    { imgUrl: Images.discount, name: "Discount Notebook" },
+    { imgUrl: Images.globalindo, name: "PT. Globalindo Intimates" },
+    { imgUrl: Images.tebeaa, name: "TB. AA" },
+    { imgUrl: Images.rehobat, name: "PT. Rehobat Sringin" },
   ];
 
   return (
@@ -112,13 +95,12 @@ const Skills = () => {
                 <p className="bold-text">{exp.year}</p>
                 <motion.div className="app__skills-exp-works">
                   {exp.works.map((work) => (
-                    <>
+                    <React.Fragment key={work.name}>
                       <motion.div
                         whileInView={{ opacity: [0, 1] }}
                         transition={{ duration: 0.5 }}
                         className="app__skills-exp-work"
                         data-tooltip-id={work.name}
-                        key={work.name}
                       >
                         <h4 className="bold-text">{work.name}</h4>
                         <p className="p-text">{work.company}</p>
@@ -131,7 +113,7 @@ const Skills = () => {
                       >
                         {work.desc}
                       </Tooltip>
-                    </>
+                    </React.Fragment>
                   ))}
                 </motion.div>
               </div>
@@ -141,16 +123,14 @@ const Skills = () => {
       </div>
       <div className="app__sertificates-brands app__flex">
         {brands.map((brand) => (
-          <>
+          <React.Fragment key={brand.name}>
             <motion.div
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
-              key={brand.name}
             >
               <img
                 src={brand.imgUrl}
                 alt={brand.name}
-                key={brand.name}
                 data-tooltip-id={brand.name}
               />
             </motion.div>
@@ -164,7 +144,7 @@ const Skills = () => {
               float={true}
               noArrow={true}
             />
-          </>
+          </React.Fragment>
         ))}
       </div>
     </>
