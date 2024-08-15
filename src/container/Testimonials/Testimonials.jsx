@@ -78,11 +78,6 @@ const Testimonials = () => {
           <div className="app__profile-testimonials">
             <img src={Images.buktiempat} alt="placholder" />
           </div>
-        </div>
-      </div>
-
-      <div className="app__row_testimonials">
-        <div className="app__profiles">
           <div className="app__profile-testimonials">
             <img src={Images.buktilima} alt="placholder" />
           </div>

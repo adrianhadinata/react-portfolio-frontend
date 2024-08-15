@@ -7,3 +7,4 @@ export { default as Works } from "./Works/Works";
 export { default as Features } from "./Features/Features";
 export { default as ServiceContainer } from "./Services/Services";
 export { default as Testimonials } from "./Testimonials/Testimonials";
+export { default as Products } from "./Products/Products";

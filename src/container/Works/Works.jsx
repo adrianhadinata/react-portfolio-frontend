@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import { AiFillEye } from "react-icons/ai";
 import "./Works.scss";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import allProjects from "../../assets/json/works.json";
 
@@ -26,13 +26,11 @@ const Works = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [filterWorks, setFilterWorks] = useState([]);
+  const works = allProjects;
 
   useEffect(() => {
     setFilterWorks(works);
-  }, []);
-
-  const works = allProjects;
-  const navigate = useNavigate();
+  }, [works]);
 
   return (
     <>

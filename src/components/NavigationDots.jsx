@@ -7,12 +7,12 @@ const NavigationDots = ({ active, arrMenu }) => {
   return (
     <div className="app__navigation">
       {arrMenu.map((item, index) => (
-        <a
-          href={`#${item}`}
-          key={item + index}
-          className="app__navigation-dot"
-          style={active === item ? { backgroundColor: "#313BAC" } : {}}
-        ></a>
+        <a href={`#${item}`} key={item + index}>
+          <div
+            className="app__navigation-dot"
+            style={active === item ? { backgroundColor: "#313BAC" } : {}}
+          ></div>
+        </a>
       ))}
     </div>
   );

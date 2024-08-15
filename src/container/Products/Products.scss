@@ -1,10 +1,9 @@
-.app__row_testimonials {
+.app__row_products {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   width: 100%;
-  // margin-top: 50px;
 
   .app__column_4 {
     display: flex;
@@ -14,9 +13,9 @@
     width: 50%;
     height: 200px;
     background-color: var(--primary-color);
-    // border-radius: 10px;
+    border-radius: 10px;
     gap: 10px;
-    // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
   .app__column_icon {
@@ -29,29 +28,40 @@
   }
 }
 
-.app__profile-testimonials {
-  width: 190px;
+.app__profile-products {
+  width: 360px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   margin: 2rem;
-  transition: all 0.5s ease-in-out; // Pindahkan transition ke elemen utama
+  background-color: white;
+  transition: all 0.5s ease-in-out;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
 
   img {
-    width: 100%;
-    height: 280px;
+    width: 350px;
+    height: 240px;
     object-fit: cover;
-    border-radius: 15px;
+  }
+
+  h4 {
+    margin-top: 5px;
+  }
+
+  p {
+    text-align: justify;
   }
 
   &:hover {
-    scale: 1.5;
+    scale: 1.1;
     // cursor: zoom-in;
   }
 }
 
-.app__text_testimonials {
+.app__text_products {
   display: flex;
   width: 100%;
   margin: 2rem;

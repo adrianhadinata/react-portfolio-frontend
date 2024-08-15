@@ -2,11 +2,21 @@ import React, { useState, useEffect } from "react";
 import { Home, Project, Services } from "./pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import RingLoader from "react-spinners/RingLoader";
+import "./library/introjs/introjs.css";
+import { Steps } from "intro.js-react";
 
 import "./App.scss";
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [tourEnabled, setTourEnabled] = useState(false);
+
+  const steps = [
+    {
+      element: ".app", // Ensure this selector is correct
+      intro: "Welcome to your first step!",
+    },
+  ];
 
   useEffect(() => {
     setLoading(true);
@@ -40,6 +50,11 @@ function App() {
       if (loadedImages === totalImages) {
         // Semua gambar telah dimuat, kita set state loading menjadi false
         setLoading(false);
+        console.log(document.getElementById("first"));
+
+        setTimeout(() => {
+          setTourEnabled(true);
+        }, 5000);
       }
     };
 
@@ -66,6 +81,22 @@ function App() {
       >
         <RingLoader color={"#36d7b7"} loading={loading} size={150} />
       </div>
+      <Steps
+        enabled={tourEnabled}
+        steps={steps}
+        initialStep={0}
+        onExit={() => console.log(document.getElementById("first"))}
+        options={{
+          showProgress: false,
+          showStepNumbers: false,
+          showBullets: false,
+          exitOnOverlayClick: false,
+          doneLabel: "Done",
+          nextLabel: "Next",
+          hideNext: false,
+          disableInteraction: false,
+        }}
+      />
       <div className="app" style={{ display: loading ? "none" : "block" }}>
         <Router>
           <Routes>

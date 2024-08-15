@@ -4,7 +4,6 @@ import { AppWrap, MotionWrap } from "../../wrapper";
 import { motion } from "framer-motion";
 import { Images } from "../../constants";
 import "./Services.scss";
-import { ButtonWhatsApp } from "../../components";
 
 const Services = () => {
   let services = [];
@@ -12,7 +11,6 @@ const Services = () => {
   services.push(Images.serviceArduino, Images.serviceWeb);
   return (
     <>
-      <ButtonWhatsApp></ButtonWhatsApp>
       <h2 className="head-text">
         Need <span>helps</span>? This is list of our <span>services</span> that
         might interest you

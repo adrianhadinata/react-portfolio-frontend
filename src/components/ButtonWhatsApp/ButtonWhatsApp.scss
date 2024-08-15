@@ -1,11 +1,42 @@
 .wa {
-  width: 20%;
   position: fixed;
-  bottom: 0%;
-  right: 0%;
+  bottom: 0;
+  right: 0;
   z-index: 100;
+  display: flex;
+  align-items: center;
 
-  @media screen and (max-width: 750px) {
-    width: 50%;
+  .icon-minimize {
+    font-size: 30px;
+    margin: 10px;
+    transition: all 0.5s ease-in-out;
+    // background-color: aquamarine;
+    // border-radius: 50%;
+    // padding: 5px;
+
+    &:hover {
+      cursor: pointer;
+      scale: 1.5;
+    }
+  }
+
+  img {
+    width: 250px;
+    opacity: 1;
+    transform: scale(1);
+    transition: all 5s ease-in-out;
+
+    @media screen and (max-width: 750px) {
+      width: 300px;
+    }
+  }
+
+  &.minimized {
+    img {
+      opacity: 0;
+      transform: scale(0);
+      pointer-events: none;
+      transition: all 5s ease-in-out;
+    }
   }
 }

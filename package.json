@@ -14,6 +14,8 @@
     "exceljs": "^4.4.0",
     "file-saver": "^2.0.5",
     "framer-motion": "^10.12.16",
+    "intro.js": "^8.0.0-beta.1",
+    "intro.js-react": "^1.0.0",
     "node-sass": "^7.0.3",
     "pure_counter": "^0.1.8",
     "react": "^18.2.0",
